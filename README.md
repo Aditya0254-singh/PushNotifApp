@@ -1,97 +1,60 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Push Notification App – React Native + Firebase (FCM)
 
-# Getting Started
+📱 Project Overview
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This project is a simple React Native app that demonstrates **Firebase Cloud Messaging (FCM)** push notifications using `@react-native-firebase/messaging`. When the app is launched, it requests notification permissions, retrieves the device's FCM token, and listens for foreground push messages.
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- Request and display FCM token on app start.
+- Handle incoming notifications in the foreground with `Alert.alert`.
+- Integrated with Firebase using `google-services.json`.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Tech Stack
 
-```sh
-# Using npm
-npm start
+- React Native (v0.80)
+- TypeScript
+- Firebase Cloud Messaging (FCM)
+- Android Emulator (Pixel 7a)
+- Firebase Console
 
-# OR using Yarn
-yarn start
-```
+## Setup Instructions
 
-## Step 2: Build and run your app
+1. Clone or unzip the project folder.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+2. Install dependencies.
 
-### Android
+3. Run the Android app.
 
-```sh
-# Using npm
-npm run android
+4. Allow permissions and note the FCM token in the terminal output or log.
 
-# OR using Yarn
-yarn android
-```
+## How to Test Notifications
 
-### iOS
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Navigate to:
+3. Paste the FCM token retrieved from the app.
+4. Send a test push message like:
+- Title: "Hello"
+- Body: "This is a test message"
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+5. You will see a pop-up notification in the emulator/app with the title.
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## Demo Video
 
-```sh
-bundle install
-```
+A demo video ("Demo_Video.mp4") is included in this submission, showcasing:
+- App launch
+- FCM token generation
+- Firebase Console message sending
+- Notification popup on emulator
 
-Then, and every time you update your native dependencies, run:
+## Folder Contents
 
-```sh
-bundle exec pod install
-```
+- 'PushNotifApp/' – Full React Native project
+- 'README.txt' – This file
+- 'Demo_Video.mp4' – App demonstration
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+##  Notes
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Ensure you are using **JDK 17**.
+- 'google-services.json' is placed under 'android/app/' correctly.
+- The app only handles **foreground notifications**.
